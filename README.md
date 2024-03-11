@@ -1,50 +1,103 @@
-# Sample app test
+# SampleApp
 
-## Overview
-The following repo contains notes about the sample project to test 
+Este proyecto, denominado SampleApp, es una aplicación de ejemplo desarrollada con el framework Spring Boot en el lenguaje de programación Java. Está diseñado para servir como un modelo básico para aplicaciones de comercio electrónico, específicamente en el contexto de la gestión de precios de productos para diferentes marcas.
 
-## Guidelines
-How to run app
+La aplicación utiliza tecnologías como Spring Boot y Spring Data JPA para facilitar el desarrollo de servicios RESTful y el acceso a datos a través de JPA. La base de datos H2 se emplea como una base de datos en memoria para propósitos de desarrollo y pruebas.
 
-1. Clone this repository
+La arquitectura de la aplicación sigue el patrón Modelo-Vista-Controlador (MVC), separando las responsabilidades en modelos de datos, controladores para gestionar las solicitudes HTTP y servicios que contienen la lógica de negocio. Se implementa la inyección de dependencias con Spring para mejorar la modularidad y la mantenibilidad del código.
 
-2. Go to folder directory and start springboot app (NOTE: IF NECESSARY DO 'mcn clean install' as previous step required)
+La aplicación proporciona un endpoint para consultar precios de productos en función de la fecha de aplicación, el identificador del producto y la marca. Además, se incluyen pruebas unitarias escritas con JUnit y Mockito para garantizar la robustez del código.
 
-3. Once the java app starts, you can follow the link to test a the only 'get' enpoint (https://www.geeksforgeeks.org/basics-of-api-testing-using-postman/)
+La estructura del proyecto sigue las convenciones de Maven, facilitando la gestión de dependencias y la construcción del proyecto.
 
-## Run tests
+Este proyecto puede ser utilizado como punto de partida o referencia para el desarrollo de aplicaciones similares en el dominio del comercio electrónico y la gestión de precios.
 
-1. Clone this repository
+## Tecnologías Utilizadas
 
-2. Go to tests folders and in your IDE select run tests
+### Spring Boot
+- **Descripción:** Framework de desarrollo para crear aplicaciones Java basado en Spring que facilita la creación de servicios RESTful.
+- **Enlace:** [Spring Boot](https://spring.io/projects/spring-boot)
 
-   NOTE: see the link for more information to how run tests in your IDE
-   Intelij: https://www.jetbrains.com/help/idea/performing-tests.html
-   Eclipse: https://wiki.eclipse.org/Eclipse/Testing
+### Spring Data JPA
+- **Descripción:** Implementación de Spring para el acceso a datos basada en el estándar JPA (Java Persistence API).
+- **Enlace:** [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 
-## Stack used
+### H2 Database
+- **Descripción:** Base de datos en memoria utilizada para desarrollo y pruebas.
+- **Enlace:** [H2 Database](https://www.h2database.com/html/main.html)
 
-1. Java
+### Maven
+- **Descripción:** Herramienta de gestión de proyectos que simplifica la construcción y gestión de dependencias.
+- **Enlace:** [Maven](https://maven.apache.org/)
 
-2. Maven
+### JUnit y Mockito
+- **Descripción:** Bibliotecas de pruebas unitarias para Java. JUnit se utiliza para escribir y ejecutar tests, mientras que Mockito facilita la creación de mocks.
+- **Enlaces:** [JUnit](https://junit.org/junit5/), [Mockito](https://site.mockito.org/)
 
-3. Jpa
+## Arquitectura y Patrones
 
-4. H2 DB
+### Arquitectura MVC
+- **Descripción:** Patrón arquitectónico que separa la aplicación en tres componentes principales: Modelo (representación de datos), Vista (interfaz de usuario) y Controlador (gestiona las interacciones).
+- **Enlace:** [MVC Architecture](https://www.baeldung.com/spring-mvc-tutorial)
 
-5. Springboot
+### Inyección de Dependencias (DI) con Spring
+- **Descripción:** Patrón que permite invertir el control de las dependencias, facilitando la creación de componentes más desacoplados.
+- **Enlace:** [Spring - Inyección de Dependencias](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction)
 
-## More Info
-This app uses an h2 bbdd embebbed as example to test the proper functionality of requirements of sample app
+## Configuración del Entorno
 
-## Support
-https://github.com/
-https://www.redhat.com/es/topics/api/what-is-a-rest-api
-https://mvnrepository.com/
-https://www.jetbrains.com/idea/
-https://spring.io/projects/spring-boot
+1. Clona el repositorio: `git clone https://github.com/tuusuario/tuproyecto.git`
+2. Navega al directorio del proyecto: `cd tuproyecto`
 
-##NOTE
-This sample app was build as simple as it waas required, but it could be be more complex, in the first try it is build with though of scalability and readability.
-This sample app has easy understanding of what id does.
+## Ejecución del Proyecto
 
+```bash
+mvn spring-boot:run
+```
+ El servicio estará disponible en http://localhost:8080.
+
+## Estructura del Proyecto
+- **src/main/java:** Contiene el código fuente Java.
+- **com.sample.bcnc:** Paquete principal del proyecto.
+- **controller:** Controladores REST.
+- **service:** Lógica de negocio y servicios.
+- **repository:** Interfaces de repositorios JPA.
+- **entity:** Entidades de datos.
+- **src/test/java:** Contiene los tests unitarios.
+## Endpoints
+### Consultar Precio
+Endpoint para consultar precios.
+
+#### URL
+
+```bash
+GET /prices/calculate
+```
+#### Parámetros de la URL
+
+- **applicationDate** (obligatorio): Fecha de aplicación en formato "yyyy-MM-dd HH:mm:ss".
+- **productId** (obligatorio): ID del producto.
+- **brandId** (obligatorio): ID de la marca.
+#### Ejemplo de Uso
+
+```bash
+curl -X GET "http://localhost:8080/prices/calculate?applicationDate=2022-01-01%2010:00:00&productId=35455&brandId=1"
+```
+
+## Pruebas
+Las pruebas unitarias están escritas utilizando JUnit y Mockito. Ejecútalas con el siguiente comando:
+
+```bash
+mvn test
+```
+## Contribuciones
+¡Contribuciones son bienvenidas! Abre un issue o una solicitud de extracción para discutir cambios.
+
+## Licencia
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+## Contacto
+https://www.linkedin.com/in/espinosasantiago/
+
+## Notas de Versión
+1.0
