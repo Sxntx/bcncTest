@@ -107,9 +107,6 @@ mvn test
 ## Contribuciones
 ¡Contribuciones son bienvenidas! Abre un issue o una solicitud de extracción para discutir cambios.
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
-
 ## Contacto
 https://www.linkedin.com/in/espinosasantiago/
 
