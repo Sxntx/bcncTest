@@ -16,32 +16,46 @@ Este proyecto puede ser utilizado como punto de partida o referencia para el des
 
 ### Spring Boot
 - **Descripción:** Framework de desarrollo para crear aplicaciones Java basado en Spring que facilita la creación de servicios RESTful.
+- **Ventajas:**
+  - **Productividad:** Spring Boot simplifica la configuración y el desarrollo, permitiendo a los desarrolladores centrarse en la lógica de la aplicación en lugar de la configuración.
 - **Enlace:** [Spring Boot](https://spring.io/projects/spring-boot)
 
 ### Spring Data JPA
 - **Descripción:** Implementación de Spring para el acceso a datos basada en el estándar JPA (Java Persistence API).
+- **Ventajas:**
+  - **Abstracción de Datos:** Proporciona una capa de abstracción sobre la capa de datos, lo que facilita la interacción con la base de datos y reduce la cantidad de código boilerplate.
 - **Enlace:** [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 
 ### H2 Database
 - **Descripción:** Base de datos en memoria utilizada para desarrollo y pruebas.
+- **Ventajas:**
+  - **Ligereza:** H2 Database es ligera y fácil de configurar, ideal para entornos de desarrollo y pruebas.
 - **Enlace:** [H2 Database](https://www.h2database.com/html/main.html)
 
 ### Maven
 - **Descripción:** Herramienta de gestión de proyectos que simplifica la construcción y gestión de dependencias.
+- **Ventajas:**
+  - **Gestión de Dependencias:** Maven automatiza la gestión de dependencias, facilitando la incorporación y actualización de bibliotecas.
 - **Enlace:** [Maven](https://maven.apache.org/)
 
 ### JUnit y Mockito
 - **Descripción:** Bibliotecas de pruebas unitarias para Java. JUnit se utiliza para escribir y ejecutar tests, mientras que Mockito facilita la creación de mocks.
+- **Ventajas:**
+  - **Testing Eficaz:** JUnit y Mockito permiten realizar pruebas unitarias de manera efectiva, asegurando la calidad del código.
 - **Enlaces:** [JUnit](https://junit.org/junit5/), [Mockito](https://site.mockito.org/)
 
 ## Arquitectura y Patrones
 
 ### Arquitectura MVC
 - **Descripción:** Patrón arquitectónico que separa la aplicación en tres componentes principales: Modelo (representación de datos), Vista (interfaz de usuario) y Controlador (gestiona las interacciones).
+- **Ventajas:**
+  - **Desacoplamiento:** La arquitectura MVC facilita el desacoplamiento de las distintas capas de la aplicación, mejorando la mantenibilidad y escalabilidad.
 - **Enlace:** [MVC Architecture](https://www.baeldung.com/spring-mvc-tutorial)
 
 ### Inyección de Dependencias (DI) con Spring
 - **Descripción:** Patrón que permite invertir el control de las dependencias, facilitando la creación de componentes más desacoplados.
+- **Ventajas:**
+  - **Modularidad:** La inyección de dependencias mejora la modularidad y facilita la prueba unitaria de componentes individuales.
 - **Enlace:** [Spring - Inyección de Dependencias](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction)
 
 ## Configuración del Entorno
